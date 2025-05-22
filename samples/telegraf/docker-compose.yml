@@ -1,7 +1,8 @@
-version: '3'
 services:
   telegraf:
-    image: telegraf:1.21.2-alpine
+    container_name: telegraf
+    image: telegraf:1.28
+    platform: linux/amd64
     volumes:
     - ./telegraf/etc/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     depends_on:
@@ -14,7 +15,9 @@ services:
       - teleg
 
   influxdb:
+    container_name: influxdb
     image: influxdb:1.8.10-alpine
+    platform: linux/amd64
     environment:
       - INFLUXDB_DB=influx
       - INFLUXDB_ADMIN_USER=admin
@@ -28,6 +31,7 @@ services:
       - teleg
 
   grafana:
+    container_name: grafana
     image: grafana/grafana:8.3.3
     depends_on:
       - influxdb
