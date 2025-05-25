@@ -2,9 +2,9 @@
 
  telegraf 
 
-![img.png](img.png)
+![image](https://github.com/user-attachments/assets/93691967-99cc-4499-96ab-d997ef486a6c)
+![image](https://github.com/user-attachments/assets/f4229057-cece-435d-a5bf-8db9d8b31a60)
 
-![img_1.png](img_1.png)
 
 prometheus
 
